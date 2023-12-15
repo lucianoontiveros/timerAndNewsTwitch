@@ -54,7 +54,7 @@ const Timer = ({ twitchClient }) => {
           }
           setPomoCount(pomo)
         }
-      }, 100);
+      }, 10000);
     }
 
     /* Funciones */

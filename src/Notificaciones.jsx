@@ -24,7 +24,7 @@ const Notificaciones = ({ twitchClient }) => {
           const command = args.shift().toLowerCase();
   
           if (command === "codigo") {
-            if (username === 'brunispet' || mod) {
+            if (username === 'cuartodechenz' || mod) {
               console.log(args);
               setCodigoSala(args);
               codigoActual = args;
@@ -39,12 +39,12 @@ const Notificaciones = ({ twitchClient }) => {
   
           switch (command) {
             case 'aviso':
-              if (username === 'brunispet' || mod) {
+              if (username === 'cuartodechenz' || mod) {
                 setAviso(message.replace('!aviso ', ''));
               }
               break;
             case 'code':
-              if (username === 'brunispet' || mod) {
+              if (username === 'cuartodechenz' || mod) {
                 args = '';
                 const code = `https://www.forestapp.cc/join-room?token=${codigoActual}`;
                 // Aquí debes enviar una respuesta al chat de Twitch con el código.
