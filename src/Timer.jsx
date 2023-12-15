@@ -140,7 +140,7 @@ const Timer = ({ twitchClient }) => {
           <div id="timerNote" className="badge none m-0 bg-blue-900 text-blue-300">{etiquetas}</div>
         </div>
       <div>
-        <div className="self-center mx-4">
+        <div className="self-center mx-4 componentesTimer">
           <div className="badge w-full notas rounded-pill bg-indigo-200 text-gray-900">Pomo Actual {pomoCount}</div>
           <div className="badge w-full notas rounded-pill bg-indigo-900 mt-1">Pomo Totales {pomodoroTotal}</div>
         </div>

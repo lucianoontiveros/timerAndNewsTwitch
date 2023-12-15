@@ -10,10 +10,10 @@ const App = () => {
     setTwitchClient(client);
   }, []);
 
-  return (
+  return(
     <div>
-      <Timer twitchClient={twitchClient} />
       <Notificaciones twitchClient={twitchClient} />
+      <Timer twitchClient={twitchClient} />
     </div>
   ); 
 };
