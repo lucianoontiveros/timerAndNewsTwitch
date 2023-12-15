@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body { 
+  text-align: center;
+}
+
+.cardImg {
+  min-height: 230.4;
+  max-height: 230.4;
+}
+#cuerpoAlerta {
+  width: 100%;
+}
+
+.componentesTimer {
+  width: 40%;
+}
+
+
+#timer {
+  line-height: 100%;
+  font-size: 7.5em;
+}
+
+#timerNote {
+  font-size: 2em;
+}
+
+.notas {
+  font-size: 1em;
+}
