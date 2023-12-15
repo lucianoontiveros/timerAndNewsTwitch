@@ -94,7 +94,7 @@ const Timer = ({ twitchClient }) => {
         const username = userstate.username;
         const mod = userstate?.mod;
         const num = parseInt(args);
-        if (username === 'brunispet' || mod) {
+        if (username === 'cuartodechenz' || mod) {
           switch (command) {
             case "start": 
               if (!iniciado) {
