@@ -8,6 +8,7 @@ body {
 }
 
 .cardImg {
+  padding: 15px 15px;
   min-height: 230.4;
   max-height: 230.4;
 }

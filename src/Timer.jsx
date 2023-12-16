@@ -134,11 +134,11 @@ const Timer = ({ twitchClient }) => {
   }, [twitchClient ]);
 
   return (
-    <div className="cardImg my-2 flex flex-col w-full items-center  d-flex justify-content-center bg-black rounded-lg shadow md:flex-row" >
-        <img className="carimgH object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={totoro} alt="" width="40px" height="40" />
-        <div className="self-center w-full justify-content-center" >
+    <div className="cardImg rounded-pill my-2 flex flex-col w-full items-center  d-flex justify-content-center bg-black rounded-lg shadow md:flex-row" >
+      <img className="carimgH object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={totoro} alt="" width="40px" height="40" />
+      <div className="self-center w-full justify-content-center" >
           <div id="timer" className="cardImg my-0 items-center text-blue-400  bg-black rounded-lg shadow md:flex-row hover:bg-green-500 dark:border-green-700 dark:bg-green-800 dark:hover:bg-green-700">{timer}</div>
-          <div id="timerNote" className="badge none m-0 bg-blue-900 text-blue-300">{etiquetas}</div>
+          <div id="timerNote" className="badge rounded-pill none m-0 bg-blue-900 text-blue-300">{etiquetas}</div>
         </div>
       <div>
         <div className="self-center mx-4 componentesTimer">
