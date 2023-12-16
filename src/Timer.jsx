@@ -9,10 +9,11 @@ const Timer = ({ twitchClient }) => {
   const [pomoCount, setPomoCount] = useState(0);
   const [etiquetas, setEtiquetas] = useState("💻Estamos por iniciar🍵");
   const [autoTimer, setAutoTimer] = useState(true);
-  var [iniciado, setIniciado] = useState(false);
+ 
 
   
   useEffect(() => {
+    var iniciado = false
     let interval;
     let minutos;
     let segundos;
@@ -29,7 +30,7 @@ const Timer = ({ twitchClient }) => {
         if (--timer < 0) {
           let audio = new Audio('campana.mp3');
           if (vueltas % 2 == 0) {
-            timer = 3 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
+            timer = 60 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
             twitchClient.say('brunispet', '!silencio Estamos en este momento estudiando / trabajando, puedes ocultar el chat para no distraerte. Si no sabes cómo se hace, avísanos y te explicamos.');
             setEtiquetas('PRODUCTIVO 📚📖')
             audio.play()
@@ -37,7 +38,7 @@ const Timer = ({ twitchClient }) => {
             pomo++
           } else {
             vueltas++
-            timer = 3 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
+            timer = 10 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
             twitchClient.say('brunispet', '!atr Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?');
             setEtiquetas('DESCANSO 🍙🥤')
             audio.play()
@@ -71,7 +72,7 @@ const Timer = ({ twitchClient }) => {
 
     function stopTimer() {
       clearInterval(interval);
-      setIniciado(false);
+      iniciado = false;
     }
 
     function timerAuto() {
@@ -98,10 +99,10 @@ const Timer = ({ twitchClient }) => {
           switch (command) {
             case "start": 
               if (!iniciado) {
-                setIniciado(true);
-                startTimer();
+                iniciado = true
+                startTimer()
               } else {
-                console.log('Ya hay un timer activo');
+                return console.log('Ya hay un timer activo');
               }
               break;
             case "pause":
