@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import totoro from './img/productivo.png'
-
+import campana from './campana.mp3'
 
 const Timer = ({ twitchClient }) => {
   var [timer, setTimer] = useState(1 * 60);
@@ -28,7 +28,7 @@ const Timer = ({ twitchClient }) => {
         setTimer(`${minutosFormateados}:${segundosFormateados}`);
 
         if (--timer < 0) {
-          let audio = new Audio('campana.mp3');
+          let audio = new Audio(campana);
           if (vueltas % 2 == 0) {
             timer = 60 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
             twitchClient.say('brunispet', '!silencio Estamos en este momento estudiando / trabajando, puedes ocultar el chat para no distraerte. Si no sabes cómo se hace, avísanos y te explicamos.');

@@ -11,9 +11,9 @@ const App = () => {
   }, []);
 
   return(
-    <div>
-      <Notificaciones twitchClient={twitchClient} />
+    <div >
       <Timer twitchClient={twitchClient} />
+      <Notificaciones twitchClient={twitchClient} />
     </div>
   ); 
 };
