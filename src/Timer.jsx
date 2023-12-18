@@ -4,7 +4,7 @@ import totoro from './img/productivo.png'
 import campana from './campana.mp3'
 
 const Timer = ({ twitchClient }) => {
-  var [timer, setTimer] = useState(1 * 60);
+  var [timer, setTimer] = useState(10 * 60);
   var [pomodoroTotal, setPomodoroTotal] = useState(3);
   const [pomoCount, setPomoCount] = useState(0);
   const [etiquetas, setEtiquetas] = useState("💻Estamos por iniciar🍵");
@@ -39,7 +39,7 @@ const Timer = ({ twitchClient }) => {
           } else {
             vueltas++
             timer = 10 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
-            twitchClient.say('cuartodechenz', 'Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?');
+            twitchClient.say('cuartodechenz', 'Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?. Si el streamer no se dio cuenta podes cambiar este mensaje por !lachancla');
             setEtiquetas('DESCANSO 🍙🥤')
             audio.play()
           }
