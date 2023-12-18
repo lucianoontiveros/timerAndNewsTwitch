@@ -31,7 +31,7 @@ const Timer = ({ twitchClient }) => {
           let audio = new Audio(campana);
           if (vueltas % 2 == 0) {
             timer = 60 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
-            twitchClient.say('brunispet', '!silencio Estamos en este momento estudiando / trabajando, puedes ocultar el chat para no distraerte. Si no sabes cómo se hace, avísanos y te explicamos.');
+            twitchClient.say('cuartodechenz', 'Estamos en este momento estudiando / trabajando, puedes ocultar el chat para no distraerte. Si no sabes cómo se hace, avísanos y te explicamos.');
             setEtiquetas('PRODUCTIVO 📚📖')
             audio.play()
             vueltas++
@@ -39,16 +39,16 @@ const Timer = ({ twitchClient }) => {
           } else {
             vueltas++
             timer = 10 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
-            twitchClient.say('brunispet', '!atr Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?');
+            twitchClient.say('cuartodechenz', 'Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?');
             setEtiquetas('DESCANSO 🍙🥤')
             audio.play()
           }
           if (pomo === pomodoroTotal + 1) {
             clearInterval(interval);
             console.log(`Se completaron ${pomodoroTotal} pomodoros`);
-            twitchClient.say('brunispet', '!atr Es el final del break, a estirar, a reponer y jugar. Espero que fuera una buena jornada para ti');
+            twitchClient.say('cuartodechenz', 'Es el final del break, a estirar, a reponer y jugar. Espero que fuera una buena jornada para ti');
             setEtiquetas('FINAL DE STREAM');
-            twitchClient.say('brunispet', 'Llegamos al final del stream');
+            twitchClient.say('cuartodechenz', 'Llegamos al final del stream');
             iniciado = false;
             audio.play()
             return

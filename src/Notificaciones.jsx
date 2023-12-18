@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Code from './Components/Code.jsx';
 import Banner from './Components/Banner.jsx';
+import { configDotenv } from 'dotenv';
 
 
 const Notificaciones = ({ twitchClient }) => {
@@ -44,12 +45,11 @@ const Notificaciones = ({ twitchClient }) => {
               }
               break;
             case 'code':
-              if (username === 'cuartodechenz' || mod) {
                 args = '';
-                const code = `https://www.forestapp.cc/join-room?token=${codigoActual}`;
+                const code = `Este es el codigo de la salita https://www.forestapp.cc/join-room?token=${codigoActual}`;
+                twitchClient.say('cuartodechenz', code);
                 // Aquí debes enviar una respuesta al chat de Twitch con el código.
                 // Por ejemplo: twitchClient.say(channel, `Este es el código de la sala: ${code}`);
-              }
               break;
             default:
               console.log('La petición no puede realizarse');
