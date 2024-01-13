@@ -152,11 +152,3 @@ const Timer = ({ twitchClient }) => {
 
 export default Timer
 
-/* 
-<div className="btn btn-primary position-relative">
-      <div>{timer}</div>
-      <div>{etiquetas}</div>
-      <div>Pomo Actual {pomoCount}</div>
-      <div>Pomo Totales {pomodoroTotal}</div>
-    </div>
-*/
