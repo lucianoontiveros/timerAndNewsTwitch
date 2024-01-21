@@ -134,17 +134,19 @@ const Timer = ({ twitchClient }) => {
   }, [twitchClient ]);
 
   return (
-    <div className="cardImg rounded-pill my-2 flex flex-col w-full items-center  d-flex justify-content-center bg-black rounded-lg shadow md:flex-row" >
-      <img className="carimgH object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={totoro} alt="" width="40px" height="40" />
-      <div className="self-center w-full justify-content-center" >
-          <div id="timer" className="cardImg my-0 items-center text-blue-400  bg-black rounded-lg shadow md:flex-row hover:bg-green-500 dark:border-green-700 dark:bg-green-800 dark:hover:bg-green-700">{timer}</div>
-          <div id="timerNote" className="badge rounded-pill none m-0 bg-blue-900 text-blue-300">{etiquetas}</div>
-        </div>
+    <div className="contenedor  rounded-pill  flex flex-col w-full items-center  d-flex justify-content-center ext-gray-900 md:flex-row text-white bg-[#050708]" >
+      <div className="contenedorTimer overflow-hidden self-center w-full" >
+        <div id="timer" className="cardImg my-0 items-center text-indigo-300 shadow md:flex-row">{timer}</div>
+        <div id="timerNote" className="badge rounded-pill none m-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 mt-1 text-white">{etiquetas}</div>
+      </div>
       <div>
         <div className="self-center mx-4 componentesTimer">
-          <div className="badge w-full notas rounded-pill bg-indigo-200 text-gray-900">Pomo Actual {pomoCount}</div>
-          <div className="badge w-full notas rounded-pill bg-indigo-900 mt-1">Pomo Totales {pomodoroTotal}</div>
+          <div className="badge w-full notas rounded-pill bg-gradient-to-br from-purple-600 to-blue-500 text-white">Pomo Actual {pomoCount}</div>
+          <div className="badge w-full notas rounded-pill bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 mt-1">Pomo Totales {pomodoroTotal}</div>
         </div>
+      </div>
+      <div className='mr-6'>
+        <img className="carimgH object-cover w-full  rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={totoro} alt="" width="40px" height="40" />
       </div>
     </div>
   )
