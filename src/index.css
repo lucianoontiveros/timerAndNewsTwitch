@@ -10,6 +10,10 @@ body {
   max-width: 1200px;
 }
 .contenedor {
+  background-image: url("./img/fondo2.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 10px 0 10px 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -24,7 +28,6 @@ body {
 
 .componentesTimer {
   font-size: 2em;
-
 }
 
 .contenedorTimer {
@@ -43,6 +46,8 @@ body {
 }
 
 #timerNote {
+
+  width: 50%px;
   font-size: 2em;
 }
 

@@ -136,7 +136,7 @@ const Timer = ({ twitchClient }) => {
   return (
     <div className="contenedor  rounded-pill  flex flex-col w-full items-center  d-flex justify-content-center ext-gray-900 md:flex-row text-white bg-[#050708]" >
       <div className="contenedorTimer overflow-hidden self-center w-full" >
-        <div id="timer" className="cardImg my-0 items-center text-indigo-300 shadow md:flex-row">{timer}</div>
+        <div id="timer" className="cardImg my-0 items-center text-purple-100 shadow md:flex-row">{timer}</div>
         <div id="timerNote" className="badge rounded-pill none m-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 mt-1 text-white">{etiquetas}</div>
       </div>
       <div>
