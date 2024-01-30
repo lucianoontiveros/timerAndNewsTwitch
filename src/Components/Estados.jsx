@@ -22,9 +22,9 @@ const Estados = ({ twitchClient }) => {
             const isMod = userstate.badges?.moderator
           
             const mensajeGeneral = `Que gusto verte por aquí ${username}. `
-            const mensajeSubs = isSub ? ` 👑 Muchas gracias por apoyar este canal. Ya tenemos croquetas aseguradas para mi y los michis` : 'Espero que tengas una buena jornada de estudio'
-            const mensajeMod = isMod ? 'La comunidad está encantada por darle una mano a Chenz ⚔️ en tu rol de mod' : '.'
-            const mensajeVid = isVip ? ' Nos hace feliz contar con tu participación en estos dias 💎.' : ''; 
+            const mensajeSubs = isSub ? ` 👑 Muchas gracias por apoyar este canal. Ya tenemos croquetas aseguradas para mi y los michis. ` : 'Espero que tengas una buena jornada de estudio. '
+            const mensajeMod = isMod ? 'La comunidad está encantada por darle una mano a Chenz en tu rol de mod ⚔️. ' : ''
+            const mensajeVid = isVip ? 'Nos hace feliz contar con tu participación en estos dias 💎. ' : ''; 
         
             const buscandoActividad = () => usuariosActividades.find((items) => items.username === username)
             if (!buscandoActividad()) {
